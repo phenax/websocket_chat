@@ -1,0 +1,15 @@
+{
+  "name": "chat",
+  "version": "0.1.0",
+  "description": "Socket.IO Chat app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Akshay Nair <phenax5@gmail.com>",
+  "repository": "https://github.com/phenax/websocket_chat.git",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "socket.io": "^1.4.5"
+  }
+}

@@ -1,0 +1,35 @@
+<h1>Welcome to chatty</h1>
+
+<div>
+	<input type='text' class='js-msg' />
+	<button class='js-send'>Send</button>
+</div>
+
+<div class='js-set'></div>
+
+
+<script src='/socket.io/socket.io.js'></script>
+
+<script>
+var socket= io();
+
+var sendBtn= document.querySelector('.js-send');
+var input= document.querySelector('.js-msg');
+var chatBox= document.querySelector('.js-set');
+
+var appendMessage= function(dat) {
+	var elem= document.createElement('div');
+	elem.classList.add('message');
+	elem.textContent= dat.message;
+	chatBox.appendChild(elem);
+};
+
+socket.on('msg', appendMessage);
+
+sendBtn.addEventListener('click', function() {
+	var text= input.value;
+	const dat= { 'message': text };
+	socket.emit('msg', dat);
+	appendMessage(dat);
+});
+</script>
