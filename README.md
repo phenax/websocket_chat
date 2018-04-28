@@ -1,5 +1,7 @@
 # Chat via Websockets
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/phenax/websocket_chat.svg)](https://greenkeeper.io/)
+
 What a waste of time!
 
 Instructions
